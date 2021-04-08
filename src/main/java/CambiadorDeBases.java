@@ -11,6 +11,10 @@ public class CambiadorDeBases {
 
     public static String base10aN(int numero, int baseN) {
 
+        if (numero < 0) {
+            return "-" + base10aN(-numero, baseN);
+        }
+
         int resto;
         StringBuilder resultado = new StringBuilder();
         String simbolos = "0123456789abcdefghijklmnopqrstuvwxyz";
